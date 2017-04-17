@@ -42,7 +42,7 @@ if (app.get('env') === 'development' || app.get('env') === 'test') {
 };
 
 app.listen(port, () => {
-  console.log(`Listening on port ${port} in this super keen env: ${process.env.NODE_ENV}`);
+  console.log(`Listening on port ${port} in ${process.env.NODE_ENV} env`);
 });
 
 module.exports = app;

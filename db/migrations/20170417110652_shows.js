@@ -15,4 +15,4 @@ exports.up = (knex, Promise) => (
   })
 );
 
-exports.down = (knex, Promise) => knex.dropTable('shows').dripTable('favorites');
+exports.down = (knex, Promise) => knex.dropTable('shows').dropTable('favorites');
