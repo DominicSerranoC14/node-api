@@ -1,12 +1,12 @@
-var express = require('express');
-var path = require('path');
-var logger = require('morgan');
-var bodyParser = require('body-parser');
+'use strict';
 
-var routes = require('./routes/');
-
-var app = express();
-
+const express = require('express');
+const path = require('path');
+const logger = require('morgan');
+const bodyParser = require('body-parser');
+const routes = require('./routes/');
+const app = express();
+const port = process.env.PORT || 3000;
 
 
 // catch 404 and forward to error handler
@@ -16,7 +16,6 @@ app.use(function(req, res, next) {
   next(err);
 });
 
-const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`Listening on port ${port} in this super keen env: ${process.env.NODE_ENV}`);
 });
