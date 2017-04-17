@@ -16,6 +16,7 @@ module.exports = {
       directory: __dirname + '/db/seeds/test'
     }
   },
+
   development: {
     client: 'pg',
     debug: true,
@@ -27,6 +28,7 @@ module.exports = {
       directory: __dirname + '/db/seeds/development'
     }
   },
+  
   production: {
     client: 'pg',
     connection: process.env.DATABASE_URL,
