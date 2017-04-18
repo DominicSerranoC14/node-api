@@ -43,7 +43,7 @@ if (app.get('env') === 'development' || app.get('env') === 'test') {
 };
 
 
-if (app.get('env') === 'development' && process.env.NODE_ENV !== 'test') {
+if (process.env.NODE_ENV !== 'test') {
   app.listen(port, () => {
     console.log(`Listening on port ${port}`);
   });
