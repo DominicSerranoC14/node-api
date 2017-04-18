@@ -12,6 +12,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use('/api/v1/', routes);
+// app.use(routes);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
@@ -41,8 +42,11 @@ if (app.get('env') === 'development' || app.get('env') === 'test') {
   });
 };
 
-app.listen(port, () => {
-  console.log(`Listening on port ${port} in ${process.env.NODE_ENV} env`);
-});
+
+if (app.get('env') === 'development' && process.env.NODE_ENV !== 'test') {
+  app.listen(port, () => {
+    console.log(`Listening on port ${port}`);
+  });
+};
 
 module.exports = app;
