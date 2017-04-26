@@ -2,7 +2,7 @@
 // $ knex seed:make shows_seed --env development.
 // knex knows to put it in the db folder (?)
 
-// Then seeded the db with 
+// Then seeded the db with
 // $ knex seed:run --env development
 
 exports.seed = function(knex, Promise) {
@@ -14,50 +14,58 @@ exports.seed = function(knex, Promise) {
           name: 'Mr. Robot',
           channel: 'USA Network',
           genre: 'drama',
+          nid: 1,
           inProduction: true
         }),
         knex('shows').insert({
           name: 'The IT Crowd',
           channel: 'Netflix',
           genre: 'comedy',
+          nid: 2,
           inProduction: false
         }),
         knex('shows').insert({
           name: 'Game of Thrones',
           channel: 'HBO',
           genre: 'drama',
+          nid: 3,
           inProduction: true
         }),
         knex('shows').insert({
           name: 'Mad Men',
           channel: 'AMC',
           genre: 'drama',
+          nid: 4,
           inProduction: false
         }),
         knex('shows').insert({
           name: 'Better Call Saul',
           channel: 'AMC',
           genre: 'dramedy',
+          nid: 5,
           inProduction: true
-        }), 
+        }),
         knex('shows').insert({
           name: 'Cheers',
           channel: 'NBC',
           genre: 'comedy',
-          inProduction: false,
-        }), 
+          nid: 6,
+          inProduction: false
+        }),
         knex('shows').insert({
           name: 'Bob\'s Burgers',
           channel: 'Fox',
           genre: 'animation',
-          inProduction: true,
-        }), 
+          nid: 7,
+          inProduction: true
+        }),
         knex('shows').insert({
           name: 'Stranger Things',
           channel: 'Netflix',
           genre: 'drama',
-          inProduction: true,
-        }) 
+          nid: 8,
+          inProduction: true
+        })
       ]);
     });
 };
